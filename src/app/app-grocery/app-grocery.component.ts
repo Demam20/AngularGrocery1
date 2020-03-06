@@ -5,12 +5,18 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-app-grocery',
   templateUrl: './app-grocery.component.html',
   styleUrls: ["../../assets/css/bootstrap-grid.min.css"]
+  
+
 })
-export class AppGroceryComponent implements OnInit {
+export class AppGroceryComponent {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+     
+      task: string;
+      tasks = [];
+        onClick(){
+          this.tasks.push({name: this.task});
+          this.task = '';
+      
+  }  
 
 }
