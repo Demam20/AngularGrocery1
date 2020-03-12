@@ -4,7 +4,7 @@
   <div class="row">
       <div class="col-xs-6 col-md-4">
           <div class="input-group">
-              <input type="text" class="form-control" placeholder="enter grocery items" id="txtSearch"[(ngModel)]="task" />
+              <input type="text" class="form-control" placeholder="enter grocery items" id="txtSearch" [(ngModel)]="task.name" />
               
               <div class="input-group-btn">
                
@@ -19,7 +19,7 @@
 
    <br />
 
-  <ul class="list-group">
+   <ul class="list-group">
     <li *ngFor="let task of tasks" class="list-group-item">
         <span (click)="onStrike(task)" [ngClass]="{'strike': task.strike}"> {{ task.name }} </span>
         <span  (click)="onDelete(task)"  class="glyphicon glyphicon-remove floatright paddingLeft"></span>
